@@ -6,31 +6,24 @@
 /*   By: ledube <ledube@student.wethinkcode.co.za>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 10:31:34 by ledube            #+#    #+#             */
-/*   Updated: 2020/07/15 14:01:50 by ledube           ###   ########.fr       */
+/*   Updated: 2020/07/16 10:15:05 by ledube           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
 int ft_iterative_factorial(int nb)
 {
-	int                     i;
-	unsigned int    r;
-
-	if (nb < 0 || nb > 12)
+	int		i;
+	int		factorial;
+	if (nb < 0)
 		return (0);
-
-			i= 2;
-			r= 1;
-			while (i <= nb)
-			{ 		
-                    r *= i;
-                    ++i;
-			}
-			return (r);
+	factorial = 1;
+	i = 2;
+	while (i <= nb)
+	{
+		factorial *= i;
+		i++;	
+	}
+	return (factorial);
 }
 
-int main()
-{
-	printf("%d",ft_iterative_factorial(13));
-			return(0);
-}
